@@ -5,11 +5,14 @@ function validarLogin() {
     
     if (nombre === 'Hilary' && password === 'gringito' && fecha === '30/01/2025') {
         alert('Inicio de sesión exitoso');
+        window.location.href = 'bienvenida.html';  // Redirige a la página de bienvenida
     } else {
         alert('Datos incorrectos, intenta nuevamente');
     }
 }
 
 function mostrarDatos() {
-    document.getElementById('contenidoSobre').style.display = 'block';
+    const contenido = document.getElementById('contenidoSobre');
+    contenido.style.display = 'block';
+    contenido.style.opacity = 1;
 }
