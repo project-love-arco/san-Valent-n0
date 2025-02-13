@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: url('amor1.jpeg') no-repeat center center;
+    background-size: contain; /* Se ajusta sin recortarse */
+    background-position: top;
+    background-color: #fbe3e8; /* Color de respaldo */
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* 📌 Animación del sobre flotando */
+.sobre {
+    position: absolute;
+    top: 20px;
+    animation: flotar 2s infinite alternate ease-in-out;
+    cursor: pointer;
+    text-align: center;
+}
+
+.sobre img {
+    width: 50px; /* Pequeño en escritorio */
+}
+
+.contenido {
+    display: none;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+/* ✨ Formulario Responsivo */
+.formulario {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    max-width: 90%; /* Adaptable a celulares */
+    margin-top: 80px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 📱 Diseño Adaptado para Celulares */
+@media (max-width: 768px) {
+    body {
+        background-size: cover; /* Usa cover en celulares */
+        background-position: center;
+    }
+
+    .sobre img {
+        width: 40px; /* Reduce el sobre en móviles */
+    }
+
+    .formulario {
+        width: 90%; /* Hace el formulario más flexible */
+        max-width: 350px;
+        margin-top: 50px;
+    }
+}

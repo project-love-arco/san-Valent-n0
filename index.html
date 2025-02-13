@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Sobre flotante -->
+    <div class="sobre" onclick="mostrarDatos()">
+        <img src="sobre.png"  id="sobreImg">
+        <div class="contenido" id="contenidoSobre">
+            <p>Nombre: Hilary</p>
+            <p>Contraseña: Gringito</p>
+            <p>Fecha: 30/01/2025</p>
+        </div>
+    </div>
+
+    <!-- Formulario de inicio de sesión -->
+    <div class="formulario">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="password" id="password" placeholder="Contraseña">
+        <input type="text" id="fecha" placeholder="Fecha (dd/mm/yyyy)">
+        <button onclick="validarLogin()">Ingresar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

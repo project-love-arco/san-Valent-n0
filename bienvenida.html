@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+    <link rel="stylesheet" href="bienvenida.css">
+</head>
+<body>
+
+    <!-- 🌸 Botón flotante "Ver Flores" -->
+    <button class="boton-flotante" onclick="verFlores()">🌸 Ver Flores</button>
+
+    <div class="mensaje">
+        <h1>Feliz San Valentín, Mi Princesa</h1>
+        <p>Te amo mucho, Hilary ❤️</p>
+    </div>
+
+    <!-- 📌 Carrusel 3D -->
+    <div class="carrusel">
+        <div class="imagenes">
+            <img src="img1.png" alt="Imagen 1">
+            <img src="img2.png" alt="Imagen 2">
+            <img src="img3.png" alt="Imagen 3">
+            <img src="img4.png" alt="Imagen 4">
+        </div>
+    </div> 
+    <br>
+
+    <!-- 📌 Nota importante -->
+    <div class="nota">
+        <h2>Nota importante: El por qué te amo 💖</h2>
+        <p>
+            Me gusta tu personalidad, amo tu sonrisa, tus ojos, tu aroma, amo todo de ti, 
+            el cómo eres como persona, tus pensamientos, tus objetivos. 
+            Sé que detrás del logro que conseguiste ahora hubo demasiado sufrimiento. 
+            A veces pasamos por momentos difíciles, pero la meta será grandiosa. 
+            Habrás pasado cosas malas antes de conocerme, entiendo tus humores y me gustan. 
+            Amo tus defectos y fortalezas.  
+            Si Dios nos unió fue por una razón, mi vida. 💖  
+        </p>
+    </div>
+
+    <!-- 💌 Carta emergente -->
+    <button onclick="mostrarCarta()" class="boton-carta">💌 Abrir Carta</button>
+
+    <div class="carta" id="carta">
+        <div class="contenido-carta">
+            <h2>Para ti, mi amor 💖</h2>
+            <p>Desde que te conocí, mi vida cambió por completo. Gracias por existir, Hilary. Te amo con todo mi corazón. 💞</p>
+            <button onclick="cerrarCarta()">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- 🎁 Mensaje final sorpresa -->
+    <div id="mensajeFinal" class="mensaje-final">
+        <h2>🎁 Sorpresa 🎁</h2>
+        <p>Solo quiero recordarte que eres la mejor parte de mi vida. ¡Te amo! 💞</p>
+    </div>
+
+    <!-- Corazones flotando -->
+    <div class="corazones"></div>
+
+    <!-- Estrellas brillantes -->
+    <div class="estrellas"></div>
+
+    <!-- 🎵 Música -->
+    <audio id="musica" autoplay loop>
+        <source src="sound/ytapi.org - dhruv - double take.mp3" type="audio/mp3">
+    </audio>
+    <button onclick="document.getElementById('musica').play()">🎵 Reproducir Música</button>
+
+    <script src="bienvenida.js"></script>
+</body>
+</html>

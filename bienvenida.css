@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://source.unsplash.com/1600x900/?love,romantic') no-repeat center center/cover;
+    color: rgb(218, 119, 209);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    overflow:auto;
+}
+
+.mensaje h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+}
+
+.mensaje p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+}
+
+/* 🎠 Carrusel 3D */
+.carrusel {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin-top: 20px;
+    perspective: 1000px;
+}
+
+.imagenes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: girar 10s infinite linear;
+}
+
+.imagenes img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transition: transform 1s;
+    transform-origin: center;
+}
+
+.imagenes img:nth-child(1) { transform: rotateY(0deg) translateZ(200px); }
+.imagenes img:nth-child(2) { transform: rotateY(90deg) translateZ(200px); }
+.imagenes img:nth-child(3) { transform: rotateY(180deg) translateZ(200px); }
+.imagenes img:nth-child(4) { transform: rotateY(270deg) translateZ(200px); }
+
+@keyframes girar {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+/* 📜 Nota importante */
+.nota {
+    background: #ffccd5;
+    padding: 20px;
+    margin-top: 30px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nota h2 {
+    color: #d6336c;
+    font-size: 24px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.nota p {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    text-align: justify;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ❤️ Corazones flotando */
+.corazones {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.corazon {
+    position: absolute;
+    color: #ff4d6d;
+    font-size: 20px;
+    opacity: 0.7;
+    animation: flotar 5s linear infinite;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(0);
+        opacity: 0;
+    }
+}
+
+/* 🌟 Estrellas brillantes */
+.estrellas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.estrella {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: estrellas 2s infinite alternate;
+}
+
+@keyframes estrellas {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0; transform: scale(0.5); }
+}
+
+/* 💌 Carta emergente */
+.carta {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.contenido-carta {
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    color: #d6336c;
+}
+
+.boton-carta {
+    background: #ff4d6d;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.boton-carta:hover {
+    background: #e63950;
+}
+
+/* 🎁 Mensaje sorpresa */
+.mensaje-final {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffccd5;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+}
+/* 🌸 Botón flotante "Ver Flores" */
+.boton-flotante {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background: #ff4d6d;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: moverArribaAbajo 2s infinite alternate;
+}
+
+.boton-flotante:hover {
+    background: #e63950;
+}
+
+/* 🌸 Animación de arriba a abajo */
+@keyframes moverArribaAbajo {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(10px); }
+}
+/* 📱 Media Query para pantallas de 680px o menos */
+@media (max-width: 680px) {
+    body {
+        padding: 5px;
+        text-align: center;
+    }
+
+    .mensaje h1 {
+        font-size: 36px;
+    }
+
+    .mensaje p {
+        font-size: 18px;
+    }
+
+    .carrusel {
+        width: 220px;
+        height: 140px;
+    }
+
+    .nota {
+        width: 95%;
+        font-size: 14px;
+    }
+
+    .nota p {
+        font-size: 13px;
+    }
+
+    .carta {
+        width: 85%;
+    }
+
+    .contenido-carta {
+        font-size: 16px;
+    }
+
+    .mensaje-final {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .boton-flotante {
+        font-size: 12px;
+        padding: 6px 10px;
+        top: 10px;
+        right: 10px;
+    }
+}
